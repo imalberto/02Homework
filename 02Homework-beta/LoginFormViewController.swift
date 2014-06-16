@@ -39,7 +39,7 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     self.mc = .LOGIN_IN_PROGRESS
     self.syncUI()
 
-    let delay = 0.1 * Double(NSEC_PER_SEC)
+    let delay = 2.0 * Double(NSEC_PER_SEC)
     let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
     dispatch_after(time, dispatch_get_main_queue(), {
       if self.validateForm() {
@@ -258,7 +258,7 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
       "helpCenterButton": self.helpCenterButton.frame
     ]
     
-    self.passwordTextField.text = "password"
+    self.passwordTextField.text = ""
   }
 
   /*
