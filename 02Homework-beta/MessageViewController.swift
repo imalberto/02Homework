@@ -1,5 +1,5 @@
 //
-//  MoreViewController.swift
+//  MessageViewController.swift
 //  02Homework-beta
 //
 //  Created by albertoc on 6/15/14.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class MessageViewController: UIViewController {
 
   init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
-    self.tabBarItem.title = "More"
-    self.tabBarItem.image = UIImage(named: "more_tab_img")
+    self.tabBarItem.title = "Messages"
+    self.tabBarItem.image = UIImage(named: "messages_tab_img")
+    
   }
 
   override func viewDidLoad() {

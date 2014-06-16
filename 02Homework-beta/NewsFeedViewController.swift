@@ -27,6 +27,9 @@ class NewsFeedViewController: UIViewController {
   init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
+    self.tabBarItem.title = "News Feed"
+    self.tabBarItem.image = UIImage(named: "newsfeed_tab_img")
+
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: nil, action: nil)
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Action, target: nil, action: nil)
     let titleLabel = UILabel()

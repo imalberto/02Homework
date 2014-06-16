@@ -54,14 +54,17 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
           // nfvc.modalTransitionStyle = .CrossDissolve
           // self.presentModalViewController(nfvc, animated: true)
           let tab = UITabBarController()
-          tab.tabBar.backgroundImage = UIImage(named: "tabbar")
+          tab.tabBar.translucent = false
+          tab.tabBar.barTintColor = UIColor.whiteColor()
+          tab.tabBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+          // tab.tabBar.backgroundImage = UIImage(named: "tabbar")
           let nav = UINavigationController(rootViewController: nfvc)
           nav.navigationBar.translucent = false
           tab.viewControllers = [
             nav,
-            dummy,
-            dummy,
-            dummy,
+            FriendRequestViewController(nibName: nil, bundle: nil),
+            MessageViewController(nibName: nil, bundle: nil),
+            NotificationViewController(nibName: nil, bundle: nil),
             more
           ]
           
