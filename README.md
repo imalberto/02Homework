@@ -28,3 +28,7 @@ Week 2 Homework
     - (x) Add a UIRefreshControl for a pull to refresh (optional)
     - (x) After a pull to refresh, delay for 2 seconds before ending (optional)
     - (x) Every other time, display an error message (optional)
+
+#### Walkthrough
+
+![Walthrough](Recordings/Homework02Take02.gif)
