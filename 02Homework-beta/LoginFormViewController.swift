@@ -57,7 +57,6 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
           tab.tabBar.translucent = false
           tab.tabBar.barTintColor = UIColor.whiteColor()
           tab.tabBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
-          // tab.tabBar.backgroundImage = UIImage(named: "tabbar")
           let nav = UINavigationController(rootViewController: nfvc)
           nav.navigationBar.translucent = false
           tab.viewControllers = [
@@ -172,17 +171,14 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    // Do any additional setup after loading the view.
     self.configureView();
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
-  // #pragma mark -- View
+  // -- view stuff
 
   func syncUI() {
     if self.mc == .LOGIN_IN_PROGRESS {
@@ -232,15 +228,7 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
       self.helpCenterButton.frame = CGRectMake(frame!.origin.x,
         50.0 + self.logoImageView.frame.size.height + 50.0 + self.formContainerView.frame.height + 8.0 + self.loginButtonContainerView.frame.height + 20.0,
         frame!.size.width, frame!.size.height)
-      
     }
-
-    // save the current position
-    
-    // figure out the size of the keyboard
-    
-    // shift everything up according
-    
   }
 
   func configureView() {
@@ -276,8 +264,7 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     self.passwordTextField.text = ""
     self.loginButton.enabled = false
   }
-  
-  // func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int)
+
   func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
     if buttonIndex == 0 {
       self.resetTextFields()

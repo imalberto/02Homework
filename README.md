@@ -21,10 +21,10 @@ Week 2 Homework
     - (✓) Immediately after launch, display the loading indicator.
     - (✓) After 2 seconds, show the feed, which is a long image in a scrollable view.
     - (✓) Tapping the status button should show the compose view w/ the keyboard (optional)
-    - Tapping a profile picture should push a profile page (optional)
+    - (x) Tapping a profile picture should push a profile page (optional)
 - More
-    - Add a scrollable view of the "More" page. (optional)
+    - (x) Add a scrollable view of the "More" page. (optional)
     - (✓) Upon tapping Log Out, return to the login screen. (optional)
-    - Add a UIRefreshControl for a pull to refresh (optional)
-    - After a pull to refresh, delay for 2 seconds before ending (optional)
-    - Every other time, display an error message (optional)
+    - (x) Add a UIRefreshControl for a pull to refresh (optional)
+    - (x) After a pull to refresh, delay for 2 seconds before ending (optional)
+    - (x) Every other time, display an error message (optional)
