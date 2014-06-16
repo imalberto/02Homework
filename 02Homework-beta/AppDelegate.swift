@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+  
+    let color = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+    UINavigationBar.appearance().barTintColor = color
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     // Override point for customization after application launch.
     var vc: LoginFormViewController = LoginFormViewController(nibName: nil, bundle: nil)

@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LoginFormViewController: UIViewController {
+class LoginFormViewController: UIViewController, UIAlertViewDelegate {
 
-  var animateViewsUp = false
-  var viewsConfiguration: Dictionary<String, CGRect> = [:]
 
   @IBOutlet var signUpButton : UIButton = nil
   @IBOutlet var helpCenterButton : UIButton = nil
   @IBOutlet var loginButton : UIButton = nil
   @IBOutlet var logoImageView : UIImageView = nil
+  @IBOutlet var loginButtonContainerView : UIView = nil
+  @IBOutlet var activityIndicatorView : UIActivityIndicatorView = nil
 
   @IBOutlet var formContainerView : UIView = nil
   @IBOutlet var formImageView : UIImageView = nil
@@ -35,6 +35,56 @@ class LoginFormViewController: UIViewController {
 
   @IBAction func onLoginButton(sender : AnyObject) {
     NSLog("onLogin")
+    self.view.endEditing(true)
+    self.mc = .LOGIN_IN_PROGRESS
+    self.syncUI()
+
+    let delay = 0.1 * Double(NSEC_PER_SEC)
+    let time: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+    dispatch_after(time, dispatch_get_main_queue(), {
+      if self.validateForm() {
+        var store: CredStore = CredStore()
+        if store.verify(self.usernameTextField.text, password: self.passwordTextField.text) {
+          self.mc = .LOGGED_IN
+          self.syncUI()
+          
+          let dummy = DummyViewController(nibName: nil, bundle: nil)
+          let nfvc = NewsFeedViewController(nibName: nil, bundle: nil)
+          let more = MoreViewController(nibName: nil, bundle: nil)
+          // nfvc.modalTransitionStyle = .CrossDissolve
+          // self.presentModalViewController(nfvc, animated: true)
+          let tab = UITabBarController()
+          tab.tabBar.backgroundImage = UIImage(named: "tabbar")
+          let nav = UINavigationController(rootViewController: nfvc)
+          nav.navigationBar.translucent = false
+          tab.viewControllers = [
+            nav,
+            dummy,
+            dummy,
+            dummy,
+            more
+          ]
+          
+          self.presentModalViewController(tab, animated: true)
+          
+        } else {
+          self.mc = .NOT_LOGGED_IN
+          self.syncUI()
+          
+          // show alert
+          var av = UIAlertView()
+          av.title = "Incorrect Password"
+          av.message = "The password you entered is incorrect. Please try again"
+          av.delegate = self
+          av.addButtonWithTitle("OK")
+          av.show()
+        }
+      } else {
+        // tell user about invalid output
+      }
+      
+    })
+    
   }
 
   @IBAction func onEditingChangedUsername(sender : AnyObject) {
@@ -57,6 +107,11 @@ class LoginFormViewController: UIViewController {
   @IBAction func onTap(sender : UITapGestureRecognizer) {
     NSLog("onTap")
     self.view.endEditing(true)
+  }
+  
+  func validateForm() -> Bool {
+    // TODO
+    return true;
   }
 
   // https://developer.apple.com/library/prerelease/ios/samplecode/UICatalog-Swift/Listings/UICatalog_TextViewController_swift.html
@@ -129,12 +184,27 @@ class LoginFormViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  // #pragma mark -- View
+
+  func syncUI() {
+    if self.mc == .LOGIN_IN_PROGRESS {
+      self.loginButton.setBackgroundImage(UIImage(named: "logging_in_button"), forState: UIControlState.Normal)
+      self.activityIndicatorView .startAnimating()
+    } else {
+      self.loginButton.setBackgroundImage(UIImage(named: "login_button_disabled"), forState: UIControlState.Normal)
+      self.activityIndicatorView.stopAnimating()
+    }
+
+    self.loginButton.imageView.setNeedsDisplay()
+  }
+
   func reconfigureView(beginKbFrame: CGRect, endKbFrame: CGRect) {
     var restore = !self.animateViewsUp;
 
     if restore {
       NSLog("Restore views")
       self.logoImageView.frame = self.viewsConfiguration["logoImageView"]!
+      self.loginButtonContainerView.frame = self.viewsConfiguration["loginButtonContainerView"]!
       self.formContainerView.frame = self.viewsConfiguration["formContainerView"]!
       self.formImageView.frame = self.viewsConfiguration["formImageView"]!
       self.usernameTextField.frame = self.viewsConfiguration["usernameTextField"]!
@@ -153,14 +223,14 @@ class LoginFormViewController: UIViewController {
         50.0 + self.logoImageView.frame.size.height + 50.0,
         frame!.size.width, frame!.size.height)
 
-      frame = self.loginButton.frame;
-      self.loginButton.frame = CGRectMake(frame!.origin.x,
+      frame = self.loginButtonContainerView.frame;
+      self.loginButtonContainerView.frame = CGRectMake(frame!.origin.x,
         50.0 + self.logoImageView.frame.size.height + 50.0 + self.formContainerView.frame.height + 8.0,
         frame!.size.width, frame!.size.height)
 
       frame = self.helpCenterButton.frame
       self.helpCenterButton.frame = CGRectMake(frame!.origin.x,
-        50.0 + self.logoImageView.frame.size.height + 50.0 + self.formContainerView.frame.height + 8.0 + self.loginButton.frame.height + 20.0,
+        50.0 + self.logoImageView.frame.size.height + 50.0 + self.formContainerView.frame.height + 8.0 + self.loginButtonContainerView.frame.height + 20.0,
         frame!.size.width, frame!.size.height)
       
     }
@@ -179,6 +249,7 @@ class LoginFormViewController: UIViewController {
 
     self.viewsConfiguration = [
       "logoImageView": self.logoImageView.frame,
+      "loginButtonContainerView": self.loginButtonContainerView.frame,
       "formContainerView": self.formContainerView.frame,
       "usernameTextField": self.usernameTextField.frame,
       "passwordTextField": self.passwordTextField.frame,
@@ -186,6 +257,8 @@ class LoginFormViewController: UIViewController {
       "loginButton": self.loginButton.frame,
       "helpCenterButton": self.helpCenterButton.frame
     ]
+    
+    self.passwordTextField.text = "password"
   }
 
   /*
@@ -197,5 +270,28 @@ class LoginFormViewController: UIViewController {
       // Pass the selected object to the new view controller.
   }
   */
-
+  
+  func resetTextFields() {
+    self.usernameTextField.text = ""
+    self.passwordTextField.text = ""
+    self.loginButton.enabled = false
+  }
+  
+  // func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int)
+  func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+    if buttonIndex == 0 {
+      self.resetTextFields()
+    }
+  }
+  
+  enum MC {
+    case NOT_LOGGED_IN
+    case LOGIN_IN_PROGRESS
+    case LOGGED_IN
+  }
+  
+  var mc:MC = .NOT_LOGGED_IN
+  var animateViewsUp = false
+  var viewsConfiguration: Dictionary<String, CGRect> = [:]
+  
 }

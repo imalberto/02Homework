@@ -12,6 +12,13 @@
 		C3C83F81194C313A00DC7306 /* _2Homework_betaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C83F80194C313A00DC7306 /* _2Homework_betaTests.swift */; };
 		C3C83F8C194D130A00DC7306 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C83F8A194D130A00DC7306 /* LoginFormViewController.swift */; };
 		C3C83F8D194D130A00DC7306 /* LoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C83F8B194D130A00DC7306 /* LoginFormViewController.xib */; };
+		C3D92F11194E51D400DCCC67 /* CredStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F10194E51D400DCCC67 /* CredStore.swift */; };
+		C3D92F14194E62C100DCCC67 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F12194E62C100DCCC67 /* NewsFeedViewController.swift */; };
+		C3D92F15194E62C100DCCC67 /* NewsFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */; };
+		C3D92F18194E658200DCCC67 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F16194E658200DCCC67 /* MoreViewController.swift */; };
+		C3D92F19194E658200DCCC67 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F17194E658200DCCC67 /* MoreViewController.xib */; };
+		C3D92F1C194E65F500DCCC67 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F1A194E65F500DCCC67 /* DummyViewController.swift */; };
+		C3D92F1D194E65F500DCCC67 /* DummyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F1B194E65F500DCCC67 /* DummyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 		C3C83F80194C313A00DC7306 /* _2Homework_betaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _2Homework_betaTests.swift; sourceTree = "<group>"; };
 		C3C83F8A194D130A00DC7306 /* LoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		C3C83F8B194D130A00DC7306 /* LoginFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFormViewController.xib; sourceTree = "<group>"; };
+		C3D92F10194E51D400DCCC67 /* CredStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredStore.swift; sourceTree = "<group>"; };
+		C3D92F12194E62C100DCCC67 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsFeedViewController.xib; sourceTree = "<group>"; };
+		C3D92F16194E658200DCCC67 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		C3D92F17194E658200DCCC67 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		C3D92F1A194E65F500DCCC67 /* DummyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		C3D92F1B194E65F500DCCC67 /* DummyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DummyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +93,14 @@
 				C3C83F74194C313A00DC7306 /* Images.xcassets */,
 				C3C83F8A194D130A00DC7306 /* LoginFormViewController.swift */,
 				C3C83F8B194D130A00DC7306 /* LoginFormViewController.xib */,
+				C3D92F12194E62C100DCCC67 /* NewsFeedViewController.swift */,
+				C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */,
 				C3C83F70194C313A00DC7306 /* Supporting Files */,
+				C3D92F10194E51D400DCCC67 /* CredStore.swift */,
+				C3D92F1A194E65F500DCCC67 /* DummyViewController.swift */,
+				C3D92F1B194E65F500DCCC67 /* DummyViewController.xib */,
+				C3D92F16194E658200DCCC67 /* MoreViewController.swift */,
+				C3D92F17194E658200DCCC67 /* MoreViewController.xib */,
 			);
 			path = "02Homework-beta";
 			sourceTree = "<group>";
@@ -189,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C83F8D194D130A00DC7306 /* LoginFormViewController.xib in Resources */,
+				C3D92F19194E658200DCCC67 /* MoreViewController.xib in Resources */,
+				C3D92F15194E62C100DCCC67 /* NewsFeedViewController.xib in Resources */,
 				C3C83F75194C313A00DC7306 /* Images.xcassets in Resources */,
+				C3D92F1D194E65F500DCCC67 /* DummyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D92F18194E658200DCCC67 /* MoreViewController.swift in Sources */,
+				C3D92F1C194E65F500DCCC67 /* DummyViewController.swift in Sources */,
 				C3C83F8C194D130A00DC7306 /* LoginFormViewController.swift in Sources */,
 				C3C83F73194C313A00DC7306 /* AppDelegate.swift in Sources */,
+				C3D92F11194E51D400DCCC67 /* CredStore.swift in Sources */,
+				C3D92F14194E62C100DCCC67 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +413,7 @@
 				C3C83F86194C313A00DC7306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3C83F87194C313A00DC7306 /* Build configuration list for PBXNativeTarget "02Homework-betaTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +422,7 @@
 				C3C83F89194C313A00DC7306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
