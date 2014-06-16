@@ -94,15 +94,10 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     NSLog("onEditingChanged Username")
 
     self.loginButton.enabled = (self.usernameTextField.text as NSString).length > 0;
-    
-    // reconfigure the view
-
   }
   @IBAction func onEditingChangedPassword(sender : AnyObject) {
     NSLog("onEditingChanged Password")
-    
-    // reconfigure the view
-
+    self.loginButton.enabled = (self.usernameTextField.text as NSString).length > 0;
   }
 
 
@@ -196,6 +191,8 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     } else {
       self.loginButton.setBackgroundImage(UIImage(named: "login_button_disabled"), forState: UIControlState.Normal)
       self.activityIndicatorView.stopAnimating()
+      
+      self.resetTextFields()
     }
 
     self.loginButton.imageView.setNeedsDisplay()

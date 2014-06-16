@@ -8,8 +8,22 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class MoreViewController: UIViewController, UIActionSheetDelegate {
 
+  @IBOutlet var logoutButton : UIButton = nil
+  
+
+  @IBAction func onLogoutButton(sender : AnyObject) {
+    NSLog("Logout")
+    
+    let sheet = UIActionSheet()
+    sheet.delegate = self
+    sheet.title = "Are you sure you want to log out?"
+    sheet.addButtonWithTitle("Log Out")
+    sheet.addButtonWithTitle("Cancel")
+    sheet.showFromTabBar(self.tabBarController.tabBar)
+  }
+  
   init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
@@ -28,6 +42,17 @@ class MoreViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int) {
+    switch (buttonIndex) {
+    case 0:
+      NSLog("logout")
+      self.dismissViewControllerAnimated(true, completion: {})
+    case 1:
+      NSLog("cancel")
+    default:
+      break
+    }
+  }
 
   /*
   // #pragma mark - Navigation
