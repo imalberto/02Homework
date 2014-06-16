@@ -25,6 +25,8 @@
 		C3D92F25194E794C00DCCC67 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F23194E794C00DCCC67 /* MessageViewController.xib */; };
 		C3D92F28194E795800DCCC67 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F26194E795800DCCC67 /* NotificationViewController.swift */; };
 		C3D92F29194E795800DCCC67 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F27194E795800DCCC67 /* NotificationViewController.xib */; };
+		C3D92F2C194E84B500DCCC67 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */; };
+		C3D92F2D194E84B500DCCC67 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		C3D92F23194E794C00DCCC67 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		C3D92F26194E795800DCCC67 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		C3D92F27194E795800DCCC67 /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				C3D92F22194E794C00DCCC67 /* MessageViewController.swift */,
 				C3D92F23194E794C00DCCC67 /* MessageViewController.xib */,
 				C3D92F26194E795800DCCC67 /* NotificationViewController.swift */,
+				C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */,
+				C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */,
 				C3D92F27194E795800DCCC67 /* NotificationViewController.xib */,
 			);
 			path = "02Homework-beta";
@@ -228,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D92F21194E794400DCCC67 /* FriendRequestViewController.xib in Resources */,
+				C3D92F2D194E84B500DCCC67 /* ComposeViewController.xib in Resources */,
 				C3C83F8D194D130A00DC7306 /* LoginFormViewController.xib in Resources */,
 				C3D92F19194E658200DCCC67 /* MoreViewController.xib in Resources */,
 				C3D92F25194E794C00DCCC67 /* MessageViewController.xib in Resources */,
@@ -257,6 +264,7 @@
 				C3D92F24194E794C00DCCC67 /* MessageViewController.swift in Sources */,
 				C3C83F8C194D130A00DC7306 /* LoginFormViewController.swift in Sources */,
 				C3C83F73194C313A00DC7306 /* AppDelegate.swift in Sources */,
+				C3D92F2C194E84B500DCCC67 /* ComposeViewController.swift in Sources */,
 				C3D92F28194E795800DCCC67 /* NotificationViewController.swift in Sources */,
 				C3D92F20194E794400DCCC67 /* FriendRequestViewController.swift in Sources */,
 				C3D92F11194E51D400DCCC67 /* CredStore.swift in Sources */,

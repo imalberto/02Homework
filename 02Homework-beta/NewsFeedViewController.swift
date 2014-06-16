@@ -21,6 +21,16 @@ class NewsFeedViewController: UIViewController {
 
   @IBAction func onStatusButton(sender : AnyObject) {
     NSLog("submit status")
+    
+    let c = ComposeViewController(nibName: nil, bundle: nil)
+    let nav = UINavigationController(rootViewController: c)
+    nav.navigationBar.translucent = false
+    nav.navigationBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+    nav.navigationBar.barTintColor = UIColor.whiteColor()
+ 
+    c.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+    
+    self.presentModalViewController(nav, animated: true)
   }
 
 
