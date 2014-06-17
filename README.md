@@ -31,4 +31,4 @@ Week 2 Homework
 
 #### Walkthrough
 
-![Walthrough](Recordings/Homework02Take02.gif)
+![Walthrough](recordings/Homework02Take02.gif)
