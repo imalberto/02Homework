@@ -30,8 +30,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // self.navigationBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
-    // self.navigationBar.barTintColor = UIColor.whiteColor()
     self.statusTextView.delegate = self
     self.statusTextView.backgroundColor = UIColor.whiteColor()
     self.statusTextView.text = ""

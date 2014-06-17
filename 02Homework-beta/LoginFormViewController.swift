@@ -177,6 +177,16 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
+
+  /*
+  // #pragma mark - Navigation
+  
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+  // Get the new view controller using [segue destinationViewController].
+  // Pass the selected object to the new view controller.
+  }
+  */
   
   // -- view stuff
 
@@ -187,10 +197,8 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     } else {
       self.loginButton.setBackgroundImage(UIImage(named: "login_button_disabled"), forState: UIControlState.Normal)
       self.activityIndicatorView.stopAnimating()
-      
       self.resetTextFields()
     }
-
     self.loginButton.imageView.setNeedsDisplay()
   }
 
@@ -249,16 +257,6 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
     self.passwordTextField.text = ""
   }
 
-  /*
-  // #pragma mark - Navigation
-
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-      // Get the new view controller using [segue destinationViewController].
-      // Pass the selected object to the new view controller.
-  }
-  */
-  
   func resetTextFields() {
     self.usernameTextField.text = ""
     self.passwordTextField.text = ""
