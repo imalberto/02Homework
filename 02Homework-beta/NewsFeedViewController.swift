@@ -29,8 +29,9 @@ class NewsFeedViewController: UIViewController {
     nav.navigationBar.barTintColor = UIColor.whiteColor()
  
     c.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-    
-    self.presentModalViewController(nav, animated: true)
+
+    nav.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+    self.presentViewController(nav, animated: true, completion: nil)
   }
 
 

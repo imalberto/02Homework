@@ -66,8 +66,9 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
             NotificationViewController(nibName: nil, bundle: nil),
             more
           ]
-          
-          self.presentModalViewController(tab, animated: true)
+
+          tab.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+          self.presentViewController(tab, animated: true, completion: nil)
           
         } else {
           self.mc = .NOT_LOGGED_IN
