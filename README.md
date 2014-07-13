@@ -20,4 +20,4 @@ Week 5 Homework
 
 #### Walkthrough
 
-![Walthrough](recordings/Homework05Take02.gif)
+![Walthrough](Recordings/Homework05Take01.gif)
