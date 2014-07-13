@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       more
     ]
 
-    // tab.selectedIndex = 3
+    tab.selectedIndex = 3
 
     self.window!.rootViewController = tab
 

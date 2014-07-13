@@ -53,14 +53,11 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     let req: NSURLRequest = NSURLRequest(URL: NSURL(string: url))
     let data:NSData = NSURLConnection.sendSynchronousRequest(req, returningResponse: nil, error: nil)
     let object:NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
-
     for o in object {
       let dict = o as NSDictionary
       let feed = Feed(dict: dict)
-      feeds.append(feed)
+      self.feeds.append(feed)
     }
-
-
   }
 
   override func didReceiveMemoryWarning() {

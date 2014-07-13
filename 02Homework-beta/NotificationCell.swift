@@ -60,10 +60,6 @@ class NotificationCell: UITableViewCell {
 //    photoImageView.image = UIImage(named: "cell_stock")
   }
 
-//  func attributedStringWithHTML(html: String) -> NSAttributedString {
-//    let label = TTTAttributedLabel(frame: CGRectZero)
-//  }
-
   // private
   func styleHTMLWithHTML(html: String) -> String {
     let fontFamily = UIFont.systemFontOfSize(14).fontName
