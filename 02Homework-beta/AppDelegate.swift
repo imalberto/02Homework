@@ -21,9 +21,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
     // Override point for customization after application launch.
-    var vc: LoginFormViewController = LoginFormViewController(nibName: nil, bundle: nil)
-    self.window!.rootViewController = vc;
+
+
+//    let vc: LoginFormViewController = LoginFormViewController(nibName: nil, bundle: nil)
+//    self.window!.rootViewController = vc;
+
+    let nfvc = NewsFeedViewController(nibName: nil, bundle: nil)
+    let more = MoreViewController(nibName: nil, bundle: nil)
+    // nfvc.modalTransitionStyle = .CrossDissolve
+    // self.presentModalViewController(nfvc, animated: true)
+    let tab = UITabBarController()
+    tab.tabBar.translucent = false
+    tab.tabBar.barTintColor = UIColor.whiteColor()
+    tab.tabBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
+    let nav = UINavigationController(rootViewController: nfvc)
+    nav.navigationBar.translucent = false
+    tab.viewControllers = [
+      nav,
+      FriendRequestViewController(nibName: nil, bundle: nil),
+      MessageViewController(nibName: nil, bundle: nil),
+      NotificationViewController(nibName: nil, bundle: nil),
+      more
+    ]
+    self.window!.rootViewController = tab
 
     self.window!.backgroundColor = UIColor.whiteColor()
     self.window!.makeKeyAndVisible()

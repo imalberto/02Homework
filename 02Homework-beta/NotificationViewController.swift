@@ -8,7 +8,12 @@
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+
+
+  @IBOutlet var tableView: UITableView
+
 
   init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -39,5 +44,13 @@ class NotificationViewController: UIViewController {
     // Pass the selected object to the new view controller.
   }
   */
+
+  func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    return 1
+  }
+
+  func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    return nil;
+  }
 
 }

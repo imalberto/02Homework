@@ -56,9 +56,7 @@ class NewsFeedViewController: UIViewController {
 
     // Do any additional setup after loading the view.
     self.activityIndicatorView.startAnimating()
-    
     self.scrollContainerView.layer.opacity = 0.0
-
     let time = dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Double(NSEC_PER_SEC)))
     dispatch_after(time, dispatch_get_main_queue(), {
         self.activityIndicatorView.stopAnimating()

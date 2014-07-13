@@ -27,6 +27,9 @@
 		C3D92F29194E795800DCCC67 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F27194E795800DCCC67 /* NotificationViewController.xib */; };
 		C3D92F2C194E84B500DCCC67 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */; };
 		C3D92F2D194E84B500DCCC67 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */; };
+		C3EAB74D197212A2003B35C0 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB74B197212A2003B35C0 /* NotificationCell.swift */; };
+		C3EAB74E197212A2003B35C0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EAB74C197212A2003B35C0 /* NotificationCell.xib */; };
+		C3EAB7501972131E003B35C0 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB74F1972131E003B35C0 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		C3D92F27194E795800DCCC67 /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
 		C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		C3EAB74B197212A2003B35C0 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		C3EAB74C197212A2003B35C0 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		C3EAB74F1972131E003B35C0 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,24 +113,12 @@
 			children = (
 				C3C83F72194C313A00DC7306 /* AppDelegate.swift */,
 				C3C83F74194C313A00DC7306 /* Images.xcassets */,
-				C3C83F8A194D130A00DC7306 /* LoginFormViewController.swift */,
-				C3C83F8B194D130A00DC7306 /* LoginFormViewController.xib */,
-				C3D92F12194E62C100DCCC67 /* NewsFeedViewController.swift */,
-				C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */,
+				C3EAB74A1971FB70003B35C0 /* View Controllers */,
 				C3C83F70194C313A00DC7306 /* Supporting Files */,
 				C3D92F10194E51D400DCCC67 /* CredStore.swift */,
-				C3D92F1A194E65F500DCCC67 /* DummyViewController.swift */,
-				C3D92F1B194E65F500DCCC67 /* DummyViewController.xib */,
-				C3D92F16194E658200DCCC67 /* MoreViewController.swift */,
-				C3D92F17194E658200DCCC67 /* MoreViewController.xib */,
-				C3D92F1E194E794400DCCC67 /* FriendRequestViewController.swift */,
-				C3D92F1F194E794400DCCC67 /* FriendRequestViewController.xib */,
-				C3D92F22194E794C00DCCC67 /* MessageViewController.swift */,
-				C3D92F23194E794C00DCCC67 /* MessageViewController.xib */,
-				C3D92F26194E795800DCCC67 /* NotificationViewController.swift */,
-				C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */,
-				C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */,
-				C3D92F27194E795800DCCC67 /* NotificationViewController.xib */,
+				C3EAB74F1972131E003B35C0 /* Feed.swift */,
+				C3EAB74B197212A2003B35C0 /* NotificationCell.swift */,
+				C3EAB74C197212A2003B35C0 /* NotificationCell.xib */,
 			);
 			path = "02Homework-beta";
 			sourceTree = "<group>";
@@ -152,6 +146,29 @@
 				C3C83F7F194C313A00DC7306 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3EAB74A1971FB70003B35C0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3D92F2A194E84B500DCCC67 /* ComposeViewController.swift */,
+				C3D92F2B194E84B500DCCC67 /* ComposeViewController.xib */,
+				C3D92F1A194E65F500DCCC67 /* DummyViewController.swift */,
+				C3D92F1B194E65F500DCCC67 /* DummyViewController.xib */,
+				C3D92F1E194E794400DCCC67 /* FriendRequestViewController.swift */,
+				C3D92F1F194E794400DCCC67 /* FriendRequestViewController.xib */,
+				C3C83F8A194D130A00DC7306 /* LoginFormViewController.swift */,
+				C3C83F8B194D130A00DC7306 /* LoginFormViewController.xib */,
+				C3D92F22194E794C00DCCC67 /* MessageViewController.swift */,
+				C3D92F23194E794C00DCCC67 /* MessageViewController.xib */,
+				C3D92F16194E658200DCCC67 /* MoreViewController.swift */,
+				C3D92F17194E658200DCCC67 /* MoreViewController.xib */,
+				C3D92F12194E62C100DCCC67 /* NewsFeedViewController.swift */,
+				C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */,
+				C3D92F26194E795800DCCC67 /* NotificationViewController.swift */,
+				C3D92F27194E795800DCCC67 /* NotificationViewController.xib */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +258,7 @@
 				C3D92F15194E62C100DCCC67 /* NewsFeedViewController.xib in Resources */,
 				C3D92F29194E795800DCCC67 /* NotificationViewController.xib in Resources */,
 				C3C83F75194C313A00DC7306 /* Images.xcassets in Resources */,
+				C3EAB74E197212A2003B35C0 /* NotificationCell.xib in Resources */,
 				C3D92F1D194E65F500DCCC67 /* DummyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D92F18194E658200DCCC67 /* MoreViewController.swift in Sources */,
+				C3EAB7501972131E003B35C0 /* Feed.swift in Sources */,
+				C3EAB74D197212A2003B35C0 /* NotificationCell.swift in Sources */,
 				C3D92F1C194E65F500DCCC67 /* DummyViewController.swift in Sources */,
 				C3D92F24194E794C00DCCC67 /* MessageViewController.swift in Sources */,
 				C3C83F8C194D130A00DC7306 /* LoginFormViewController.swift in Sources */,
