@@ -1,0 +1,15 @@
+{
+ "name": "connectjs",
+ "description": "",
+ "author": { "name": "Nobody", "email": "nobody@gmail.com" },
+ "version": "0.1.0",
+ "keywords": [ "" ],
+ "maintainers": [ "" ],
+ "contributors": [
+   "Nobody <nobody@gmail.com>"
+ ],
+ "licenses": [ "MIT" ],
+ "dependencies": {
+   "express": "~3.x"
+  }
+}
