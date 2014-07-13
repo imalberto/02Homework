@@ -45,7 +45,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 
   func onDismissMe(sender: AnyObject?) {
     NSLog("onDismissMe")
-    // [self dismissViewControllerAnimated:YES completion:nil];
     self.dismissViewControllerAnimated(true, completion: {});
   }
   func onPostStatus(sender: AnyObject?) {

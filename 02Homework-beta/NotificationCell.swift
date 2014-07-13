@@ -43,52 +43,45 @@ class NotificationCell: UITableViewCell {
   }
 
   func configure(feed: Feed) {
-    self.feedTextLabel.attributedText = self.attributedStringWithHTML(feed.text)
-    // self.feedTimestampLabel.text = feed.getTimestamp()
-    // self.feedTimestampLabel.text = "6 hours ago"
-    self.feedTimestampLabel.text = feed.when
 
+    let styledHtml = styleHTMLWithHTML(feed.text)
+    self.feedTextLabel.attributedText = self.attributedStringWithHTML(styledHtml)
+
+    self.feedTimestampLabel.text = feed.when
+    // self.feedTimestampLabel.text = feed.getTimestamp()
 
     self.feedTypeImageView.image = UIImage(named: feed.type)
     self.photoImageView.image = nil // set image here
 
     let url = NSURL(string: feed.imageUrl)
-    // timeout after 60secs
     let req = NSURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 60)
-
-
-
     photoImageView.image = UIImage(named: feed.image)
-
 //    photoImageView.setImageWithURL(url)
 //    photoImageView.image = UIImage(named: "cell_stock")
-
-//    let reqOp = AFHTTPRequestOperation(request: req)
-//    reqOp.responseSerializer = AFImageResponseSerializer()
-//    reqOp.setCompletionBlockWithSuccess({ (_, responseObject) in
-//
-//        dispatch_sync(dispatch_get_main_queue(), {
-//            self.photoImageView.image = responseObject as UIImage
-//        })
-//
-//    }, failure: { (_, error) in
-//    })
-//
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-//        reqOp.start()
-//    })
-//    NSOperationQueue.mainQueue().addOperation(reqOp)
-//    reqOp.start()
   }
 
+//  func attributedStringWithHTML(html: String) -> NSAttributedString {
+//    let label = TTTAttributedLabel(frame: CGRectZero)
+//  }
+
   // private
+  func styleHTMLWithHTML(html: String) -> String {
+    let fontFamily = UIFont.systemFontOfSize(14).fontName
+    let style = "<meta charset=\"UTF-8\"><style> body { font-family: '" + fontFamily + "'; font-size: 14px; } b {font-family: '" + fontFamily + "'; }</style>"
+
+    return String(style + html)
+  }
   func attributedStringWithHTML(html: String) -> NSAttributedString {
+
     let options = [
       NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
     ]
-    var s = NSAttributedString(data: html.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false), options: options, documentAttributes: nil, error: nil)
+    var s = NSMutableAttributedString(data: html.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false), options: options, documentAttributes: nil, error: nil)
+    let pp:NSMutableParagraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as NSMutableParagraphStyle
+    pp.lineBreakMode = NSLineBreakMode.ByTruncatingTail
+    s.addAttribute(NSParagraphStyleAttributeName, value: pp, range: NSMakeRange(0, s.length))
 
-    return s
+    return s.copy() as NSAttributedString
   }
 
 }

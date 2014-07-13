@@ -4,3 +4,4 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import <UIImageView+AFNetworking.h>
+#import <TTTAttributedLabel/TTTAttributedLabel.h>

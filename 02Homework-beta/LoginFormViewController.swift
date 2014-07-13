@@ -51,8 +51,7 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate {
           let dummy = DummyViewController(nibName: nil, bundle: nil)
           let nfvc = NewsFeedViewController(nibName: nil, bundle: nil)
           let more = MoreViewController(nibName: nil, bundle: nil)
-          // nfvc.modalTransitionStyle = .CrossDissolve
-          // self.presentModalViewController(nfvc, animated: true)
+
           let tab = UITabBarController()
           tab.tabBar.translucent = false
           tab.tabBar.barTintColor = UIColor.whiteColor()

@@ -26,19 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // let color = UIColor(red: 0.31, green: 0.42, blue: 0.64, alpha: 1.0) // paler
     UINavigationBar.appearance().barTintColor = color
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
     // Override point for customization after application launch.
 
-
-//    let vc: LoginFormViewController = LoginFormViewController(nibName: nil, bundle: nil)
-//    self.window!.rootViewController = vc;
-
     let nfvc = NewsFeedViewController(nibName: nil, bundle: nil)
     let more = MoreViewController(nibName: nil, bundle: nil)
-    // nfvc.modalTransitionStyle = .CrossDissolve
-    // self.presentModalViewController(nfvc, animated: true)
     let tab = UITabBarController()
     tab.tabBar.translucent = false
     tab.tabBar.barTintColor = UIColor.whiteColor()
@@ -58,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       more
     ]
 
-    tab.selectedIndex = 3
+    // tab.selectedIndex = 3
 
     self.window!.rootViewController = tab
 
