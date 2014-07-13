@@ -36,15 +36,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     tab.tabBar.translucent = false
     tab.tabBar.barTintColor = UIColor.whiteColor()
     tab.tabBar.tintColor = UIColor(red: 59.0/255.0, green: 89.0/255.0, blue: 152.0/255.0, alpha: 1.0)
-    let nav = UINavigationController(rootViewController: nfvc)
-    nav.navigationBar.translucent = false
+
+    let navFeed = UINavigationController(rootViewController: nfvc)
+    navFeed.navigationBar.translucent = false
+
+    let note = NotificationViewController(nibName: nil, bundle: nil)
+    let navNote = UINavigationController(rootViewController: note)
+
     tab.viewControllers = [
-      nav,
+      navFeed,
       FriendRequestViewController(nibName: nil, bundle: nil),
       MessageViewController(nibName: nil, bundle: nil),
-      NotificationViewController(nibName: nil, bundle: nil),
+      navNote,
       more
     ]
+
+    tab.selectedIndex = 3
+
     self.window!.rootViewController = tab
 
     self.window!.backgroundColor = UIColor.whiteColor()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28C1503FCBA24125A74BADFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B080AE68C3410992950B12 /* libPods.a */; };
 		C3C83F73194C313A00DC7306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C83F72194C313A00DC7306 /* AppDelegate.swift */; };
 		C3C83F75194C313A00DC7306 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C83F74194C313A00DC7306 /* Images.xcassets */; };
 		C3C83F81194C313A00DC7306 /* _2Homework_betaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C83F80194C313A00DC7306 /* _2Homework_betaTests.swift */; };
@@ -30,6 +31,7 @@
 		C3EAB74D197212A2003B35C0 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB74B197212A2003B35C0 /* NotificationCell.swift */; };
 		C3EAB74E197212A2003B35C0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EAB74C197212A2003B35C0 /* NotificationCell.xib */; };
 		C3EAB7501972131E003B35C0 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB74F1972131E003B35C0 /* Feed.swift */; };
+		C3EAB75319725222003B35C0 /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB75219725222003B35C0 /* Dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4B080AE68C3410992950B12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C83F6D194C313A00DC7306 /* 02Homework-beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02Homework-beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C83F71194C313A00DC7306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C83F72194C313A00DC7306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +73,9 @@
 		C3EAB74B197212A2003B35C0 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		C3EAB74C197212A2003B35C0 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		C3EAB74F1972131E003B35C0 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		C3EAB75119725221003B35C0 /* 02Homework-beta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "02Homework-beta-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3EAB75219725222003B35C0 /* Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dummy.m; sourceTree = "<group>"; };
+		DFDE0AEE151A4A92A3C7FE5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C1503FCBA24125A74BADFE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B183BCCE0193400FAF2A47B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4B080AE68C3410992950B12 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3C83F64194C313A00DC7306 = {
 			isa = PBXGroup;
 			children = (
 				C3C83F6F194C313A00DC7306 /* 02Homework-beta */,
 				C3C83F7D194C313A00DC7306 /* 02Homework-betaTests */,
 				C3C83F6E194C313A00DC7306 /* Products */,
+				DFDE0AEE151A4A92A3C7FE5E /* Pods.xcconfig */,
+				B183BCCE0193400FAF2A47B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +133,11 @@
 				C3EAB74A1971FB70003B35C0 /* View Controllers */,
 				C3C83F70194C313A00DC7306 /* Supporting Files */,
 				C3D92F10194E51D400DCCC67 /* CredStore.swift */,
+				C3EAB75219725222003B35C0 /* Dummy.m */,
 				C3EAB74F1972131E003B35C0 /* Feed.swift */,
 				C3EAB74B197212A2003B35C0 /* NotificationCell.swift */,
 				C3EAB74C197212A2003B35C0 /* NotificationCell.xib */,
+				C3EAB75119725221003B35C0 /* 02Homework-beta-Bridging-Header.h */,
 			);
 			path = "02Homework-beta";
 			sourceTree = "<group>";
@@ -178,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3C83F84194C313A00DC7306 /* Build configuration list for PBXNativeTarget "02Homework-beta" */;
 			buildPhases = (
+				DCE880CE3FD24B5D90AA1809 /* Check Pods Manifest.lock */,
 				C3C83F69194C313A00DC7306 /* Sources */,
 				C3C83F6A194C313A00DC7306 /* Frameworks */,
 				C3C83F6B194C313A00DC7306 /* Resources */,
+				901ABD74648A4F03AAB5F7B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +293,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		901ABD74648A4F03AAB5F7B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCE880CE3FD24B5D90AA1809 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3C83F69194C313A00DC7306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,6 +334,7 @@
 				C3D92F18194E658200DCCC67 /* MoreViewController.swift in Sources */,
 				C3EAB7501972131E003B35C0 /* Feed.swift in Sources */,
 				C3EAB74D197212A2003B35C0 /* NotificationCell.swift in Sources */,
+				C3EAB75319725222003B35C0 /* Dummy.m in Sources */,
 				C3D92F1C194E65F500DCCC67 /* DummyViewController.swift in Sources */,
 				C3D92F24194E794C00DCCC67 /* MessageViewController.swift in Sources */,
 				C3C83F8C194D130A00DC7306 /* LoginFormViewController.swift in Sources */,
@@ -390,23 +445,30 @@
 		};
 		C3C83F85194C313A00DC7306 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFDE0AEE151A4A92A3C7FE5E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "02Homework-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "02Homework-beta/02Homework-beta-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C3C83F86194C313A00DC7306 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFDE0AEE151A4A92A3C7FE5E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "02Homework-beta/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "02Homework-beta/02Homework-beta-Bridging-Header.h";
 			};
 			name = Release;
 		};

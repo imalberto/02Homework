@@ -14,6 +14,8 @@ data = fs.readFileSync(__dirname + '/assets/data.json', 'utf-8');
 json = JSON.parse(data);
 
 app.get("/data", function (req, res) {
+
+    console.log('serving ... ');
     res.setHeader('content-type', 'application/json');
     res.end(data);
 });

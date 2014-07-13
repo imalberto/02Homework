@@ -8,6 +8,7 @@
  "contributors": [
    "Nobody <nobody@gmail.com>"
  ],
+ "main": "./index.js",
  "licenses": [ "MIT" ],
  "dependencies": {
    "express": "~3.x"
