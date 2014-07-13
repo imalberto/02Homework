@@ -28,7 +28,7 @@ class MoreViewController: UIViewController, UIActionSheetDelegate {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
     self.tabBarItem.title = "More"
-    self.tabBarItem.image = UIImage(named: "more_tab_img")
+    self.tabBarItem.image = UIImage(named: "tabBar_More_Normal")
   }
 
   override func viewDidLoad() {

@@ -1,47 +1,65 @@
 [{
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "6 hours ago",
+    "type": "link_type",
+    "image": "cell_bart",
+    "imageUrl": "http://localhost:3000/assets/img@2x.png"
+}, {
+    "text": "<b>Jonathan Xu</b> commented on your <b>post</b> in <b>CodePath for iOS Bootcamp</b>, <b>January 2014</b>. Can you post a sprint plan for the next 4 weeks ?",
+    "timestamp": 1405217173294,
+    "when": "Friday at 11:29 AM",
+    "type": "apple_type",
+    "image": "cell_bird",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Friday at 12:52 AM",
+    "type": "like_type",
+    "image": "cell_placeholder",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Thursday at 11:41 PM",
+    "type": "calendar_type",
+    "image": "cell_flower",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Thursday at 11:28 PM",
+    "type": "calendar_type",
+    "image": "cell_bart",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Wednesday at 6:45 PM",
+    "type": "like_type",
+    "image": "cell_flower",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Wednesday at 4:45 PM",
+    "type": "link_type",
+    "image": "cell_bird",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Wednesday at 4:23 PM",
+    "type": "apple_type",
+    "image": "cell_flower",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }, {
     "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
     "timestamp": 1405217173294,
-    "type": "1",
-    "imageUrl": "http://localhost:3000/assets/img@2x.png"
-}, {
-    "text": "<b>Ben Langholz</b> tagged you in a <b>post</b> in <b>iOS for Designers</b>. Can you post a sprint plan for the next 4 weeks ?",
-    "timestamp": 1405217173294,
-    "type": "1",
+    "when": "Last week ...",
+    "type": "apple_type",
+    "image": "cell_bart",
     "imageUrl": "http://localhost:3000/assets/img@2x.png"
 }]
 

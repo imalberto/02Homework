@@ -10,6 +10,7 @@ import UIKit
 
 class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+  var manager: AFHTTPRequestOperationManager!
   var feeds = [Feed]()
 
   @IBOutlet var tableView: UITableView
@@ -18,19 +19,30 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
   init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
+
     self.tabBarItem.title = "Notifications"
-    self.tabBarItem.image = UIImage(named: "notifications_tab_img")
+    self.tabBarItem.image = UIImage(named: "tabBar_Notifications_Normal")
 
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "onSearch:")
-    let img = UIImage(data: nil)
+    let img = UIImage(named: "nav_friendsglyph_active")
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: UIBarButtonItemStyle.Plain, target: self, action: "onMessages:")
-    
+
+    manager = AFHTTPRequestOperationManager()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    self.tableView.backgroundColor = UIColor(red: 0.83, green: 0.84, blue: 0.86, alpha: 1)
+
     // Do any additional setup after loading the view.
+
+    let titleLabel = UILabel(frame:CGRectZero)
+    titleLabel.text = "Notifications"
+    titleLabel.textColor = UIColor.whiteColor()
+    titleLabel.font = UIFont.boldSystemFontOfSize(17)
+    titleLabel.sizeToFit()
+    self.navigationItem.titleView = titleLabel
     tableView.dataSource = self
     tableView.delegate = self
 
@@ -46,17 +58,8 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
       let dict = o as NSDictionary
       let feed = Feed(dict: dict)
       feeds.append(feed)
-
-      NSLog("%@", feed)
     }
 
-//    NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=g9au4hv6khv6wzvzgt55gpqs";
-//
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//    id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//    NSLog(@"%@", object);
-//    }];
 
   }
 
@@ -91,20 +94,25 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
     return feeds.count
   }
 
+  func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+
+    let vc = NotificationDetailViewController(nibName: nil, bundle: nil)
+    self.navigationController.pushViewController(vc, animated: true)
+
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+
   func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
     var cell: NotificationCell!
 
     cell = tableView.dequeueReusableCellWithIdentifier("NotificationCell") as NotificationCell
 
-    if cell != nil {
-      NSLog("cell is not nil")
-    } else {
-      NSLog("cell is nil!")
-    }
-
     let feed = self.feeds[indexPath.row]
 
     cell.configure(feed)
+
+//    manager.GET(feed.imageUrl, parameters: nil, success: {(_, responseObject) in
+//      }, failure: { (_, error) in })
 
     return cell
 

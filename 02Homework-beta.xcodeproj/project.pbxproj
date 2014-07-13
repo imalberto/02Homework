@@ -32,6 +32,8 @@
 		C3EAB74E197212A2003B35C0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EAB74C197212A2003B35C0 /* NotificationCell.xib */; };
 		C3EAB7501972131E003B35C0 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB74F1972131E003B35C0 /* Feed.swift */; };
 		C3EAB75319725222003B35C0 /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB75219725222003B35C0 /* Dummy.m */; };
+		C3EAB75619727FC1003B35C0 /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAB75419727FC1003B35C0 /* NotificationDetailViewController.swift */; };
+		C3EAB75719727FC1003B35C0 /* NotificationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EAB75519727FC1003B35C0 /* NotificationDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		C3EAB74F1972131E003B35C0 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		C3EAB75119725221003B35C0 /* 02Homework-beta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "02Homework-beta-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3EAB75219725222003B35C0 /* Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dummy.m; sourceTree = "<group>"; };
+		C3EAB75419727FC1003B35C0 /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
+		C3EAB75519727FC1003B35C0 /* NotificationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationDetailViewController.xib; sourceTree = "<group>"; };
 		DFDE0AEE151A4A92A3C7FE5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,8 @@
 				C3D92F13194E62C100DCCC67 /* NewsFeedViewController.xib */,
 				C3D92F26194E795800DCCC67 /* NotificationViewController.swift */,
 				C3D92F27194E795800DCCC67 /* NotificationViewController.xib */,
+				C3EAB75419727FC1003B35C0 /* NotificationDetailViewController.swift */,
+				C3EAB75519727FC1003B35C0 /* NotificationDetailViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				C3D92F25194E794C00DCCC67 /* MessageViewController.xib in Resources */,
 				C3D92F15194E62C100DCCC67 /* NewsFeedViewController.xib in Resources */,
 				C3D92F29194E795800DCCC67 /* NotificationViewController.xib in Resources */,
+				C3EAB75719727FC1003B35C0 /* NotificationDetailViewController.xib in Resources */,
 				C3C83F75194C313A00DC7306 /* Images.xcassets in Resources */,
 				C3EAB74E197212A2003B35C0 /* NotificationCell.xib in Resources */,
 				C3D92F1D194E65F500DCCC67 /* DummyViewController.xib in Resources */,
@@ -331,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EAB75619727FC1003B35C0 /* NotificationDetailViewController.swift in Sources */,
 				C3D92F18194E658200DCCC67 /* MoreViewController.swift in Sources */,
 				C3EAB7501972131E003B35C0 /* Feed.swift in Sources */,
 				C3EAB74D197212A2003B35C0 /* NotificationCell.swift in Sources */,

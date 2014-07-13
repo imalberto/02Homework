@@ -14,7 +14,7 @@ class FriendRequestViewController: UIViewController {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
     self.tabBarItem.title = "Requests"
-    self.tabBarItem.image = UIImage(named: "request_tab_img")
+    self.tabBarItem.image = UIImage(named: "tabBar_People_Normal")
 
   }
 

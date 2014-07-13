@@ -13,15 +13,18 @@ var fs = require('fs'),
 data = fs.readFileSync(__dirname + '/assets/data.json', 'utf-8');
 json = JSON.parse(data);
 
+app.use(function (req, res, next) {
+    console.log('[%s] %s => %s', Date.now(), req.method, req.url);
+    next();
+});
 app.get("/data", function (req, res) {
-
-    console.log('serving ... ');
     res.setHeader('content-type', 'application/json');
     res.end(data);
 });
 app.use(app.router);
 
-app.use("/assets", express.static(__dirname + '/assets'));
+// cache image for 1 day
+app.use("/assets", express.static(__dirname + '/assets', { maxAge: 86400000 }));
 
 http.createServer(app).listen(3000);
 

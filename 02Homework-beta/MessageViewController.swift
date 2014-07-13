@@ -14,7 +14,7 @@ class MessageViewController: UIViewController {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     // Custom initialization
     self.tabBarItem.title = "Messages"
-    self.tabBarItem.image = UIImage(named: "messages_tab_img")
+    self.tabBarItem.image = UIImage(named: "tabBar_Messages_Normal")
     
   }
 
